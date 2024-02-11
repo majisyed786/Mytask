@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <h2>Items Details</h2>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng *ngFor="let item of  items"  (click)="SelectdItems(item)">
+            <td>{{item.Id}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{item.Description}}</td>
+            <td> 
+                <img [src]="item.Images" src="{{item.Images}}" alt="{{item.Name}}" class="img-responsive" style="max-height: 50px;">
+            </td>
+            <td><a class="btn btn-danger btn-sm"   (click)="deleteItems(item)">Delete</a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+      <a routerLink="/additems" class="btn btn-primary btn-md"> Add New Items</a>&nbsp;
+      <a routerLink="/home" class="btn btn-info btn-md "> Back to Home</a>
+</div>

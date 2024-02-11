@@ -1,0 +1,32 @@
+<div class="container mt-3">
+    <h2>Add new items</h2>
+<form >
+    <div class="row">
+        <div class="col-sm-4 form-group">
+            <label for="name">Name</label>
+            <!-- <input type="text" id="name" [(ngModel)]="name" name="name" class="form-control"> -->
+            <input type="text" id="Name" #ingName name="Name" class="form-control">
+        </div>
+        <div class="col-sm-4 form-group">
+            <label for="text">Description</label>
+            <!-- <input type="text" id="amount" [(ngModel)]="amount" name="amount" class="form-control"> -->
+            <input type="text" id="Description" #ingDescription name="Description" class="form-control">
+        </div>
+        <div class="col-sm-4 form-group">
+            <label for="text">Image Link</label>
+            <!-- <input type="text" id="amount" [(ngModel)]="Images" name="Images" class="form-control"> -->
+            <input type="text" id="Images" #ingImages name="Images" class="form-control">
+        </div>
+    </div>
+    
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <button class="btn btn-success" id="add" type="button" (click)="addItems()">Add</button> &nbsp;           
+            <button class="btn btn-danger" id="delete" type="button">Delete</button>&nbsp;
+            <button class="btn btn-primary" id="clear" type="button">Clear</button>&nbsp;
+            <button routerLink="/data" class="btn btn-info" id="backToList" >Back to List</button>
+        </div>
+    </div>
+   </form> 
+
+   </div>
